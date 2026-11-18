@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/llsjjz/c/project/test/cmake_install.cmake",
+		"/home/llsjjz/c/project/test/Func/cmake_install.cmake",
+		"/home/llsjjz/c/project/test/Core/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,2 @@
+add_subdirectory(sys_STATIC)
+add_subdirectory(sys_SHARED)

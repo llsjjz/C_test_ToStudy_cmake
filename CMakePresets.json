@@ -1,0 +1,43 @@
+{
+    "version": 6,
+    "cmakeMinimumRequired": {
+      "major": 3,
+      "minor": 25,
+      "patch": 0
+    },
+    "configurePresets": [
+      {
+        "name": "base",
+        "hidden": true,
+        "binaryDir": "${sourceDir}/build/${presetName}",
+        "cacheVariables": {
+          "CMAKE_C_STANDARD": "11",
+          "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+        }
+      },
+      {
+        "name": "ninja",
+        "displayName": "Ninja (Debug)",
+        "description": "使用 Ninja 生成器，Debug 配置",
+        "inherits": "base",
+        "generator": "Ninja",
+        "cacheVariables": {
+          "CMAKE_BUILD_TYPE": "Debug"
+        }
+      },
+      {
+        "name": "make",
+        "displayName": "Unix Makefiles (Release)",
+        "description": "使用 Unix Makefiles 生成器，Release 配置",
+        "inherits": "base",
+        "generator": "Unix Makefiles",
+        "cacheVariables": {
+          "CMAKE_BUILD_TYPE": "Release"
+        }
+      }
+    ],
+    "buildPresets": [
+      { "name": "ninja", "configurePreset": "ninja" },
+      { "name": "make",  "configurePreset": "make"  }
+    ]
+  }
